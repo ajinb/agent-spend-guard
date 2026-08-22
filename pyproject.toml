@@ -1,0 +1,36 @@
+[project]
+name = "agent-spend-guard"
+version = "0.1.0"
+description = "A runtime spend circuit breaker for agent trajectories — per-run budgets, fan-out caps, a graceful degradation ladder, and the cost attribution the OpenTelemetry GenAI conventions leave out."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.11"
+authors = [{ name = "Ajin Baby" }]
+keywords = ["ai", "agents", "finops", "llm", "cost", "opentelemetry", "sre", "guardrails"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+otel = ["opentelemetry-api>=1.25"]
+
+[project.urls]
+Homepage = "https://cloudandsre.com"
+Repository = "https://github.com/ajinb/agent-spend-guard"
+
+[project.scripts]
+agent-spend-guard = "agent_spend_guard.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agent_spend_guard"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

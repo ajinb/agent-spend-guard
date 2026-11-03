@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "agent-spend-guard"
+message: "If you use this software, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: Baby
+    given-names: Ajin
+    orcid: "https://orcid.org/0009-0007-6190-9516"
+repository-code: "https://github.com/ajinb/agent-spend-guard"
+url: "https://cloudandsre.com"
+abstract: "A runtime spend circuit breaker for agent trajectories: per-run budgets, fan-out and wall-clock caps, a graceful degradation ladder, and the cost attribution the OpenTelemetry GenAI conventions leave out."
+license: Apache-2.0
+version: "0.1.0"
+date-released: "2026-11-02"
+keywords:
+  - ai-agents
+  - finops
+  - llm-cost
+  - circuit-breaker
+  - opentelemetry
